@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<link rel="stylesheet" href="mart.css">
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>KISAN MART</title>
+</head>
+
+<body>
+
+<script src="mart.js"></script>
+
+</body>
+
+
+<header>
+<h1>🌾 KISAN  MART</h1>
+<p>Farmer to Consumer Agricultural Marketplace</p>
+</header>
+
+<section class="hero">
+<h2>🌾 Naturally Fresh Produce Every Single Day</h2>
+<p>🌾 "Farm Fresh Goodness Straight From Farmers To Your Doorstep" 🚜</p>
+</section>
+
+<div class="container">
+
+<div class="analytics">
+
+<div class="box">
+<h2 id="productCount">0</h2>
+<p>Products Listed</p>
+</div>
+
+<div class="box">
+<h2 id="farmerCount">50</h2>
+<p>Registered Farmers</p>
+</div>
+
+<div class="box">
+<h2 id="orderCount">0</h2>
+<p>Orders Received</p>
+</div>
+
+</div>
+
+
+<div class="search">
+    <input type="text"
+id="searchBox"
+placeholder="Search Crops, Fruits, Vegetables">
+
+</div>
+
+<div class="products">
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=800&q=80" alt="Tomatoes">
+
+<h3>Organic Tomatoes</h3>
+<p>Fresh Farm Tomatoes</p>
+<div class="price">₹40 / KG</div>
+<button onclick="selectProduct('Organic  Tomatoes')">
+Buy Now
+</button>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b"alt="Wheat">
+<h3>Premium Wheat</h3>
+<p>Direct From Farmers</p>
+<div class="price">₹30 / KG</div>
+<button onclick="selectProduct('Premium Wheat')">
+Buy Now
+</button>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=80" alt="Apples">
+
+<h3>Fresh Apples</h3>
+<p>Organic Orchard Apples</p>
+<div class="price">₹120 / KG</div>
+<button onclick="selectProduct('Fresh Apples')">
+Buy Now
+</button>
+</div>
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80" alt="Rice">
+
+<h3>Organic rice</h3>
+<p>Rice</p>
+<div class="price">₹70/ KG</div>
+<button onclick="selectProduct('organic  Rice')">
+Buy Now
+</button>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>🌱 Add Product</h2>
+
+<input type="text"
+id="farmerName"
+placeholder="Farmer Name">
+
+<input type="text"
+id="productTitle"
+placeholder="Product Name">
+
+<input type="number"
+id="price"
+placeholder="Price Per KG">
+
+<input type="file">
+
+<button onclick="addProduct()">
+Add Product
+</button>
+
+<h3 id="status"></h3>
+
+</div>
+
+<div class="section">
+
+<h2>🛒 Place Order</h2>
+
+<select id="product">
+
+<option>Organic Tomatoes</option>
+<option>Premium Wheat</option>
+<option>Fresh Apples</option>
+<option>Organic Rice</option>
+
+</select>
+
+<button onclick="placeOrder()">
+Place Order
+</button>
+
+</div>
+
+<div class="section">
+
+<h2>🚚 Order Tracking</h2>
+
+<p>
+Selected Product :
+<span id="selectedProduct">
+Not Selected
+</span>
+</p>
+
+<br>
+
+<progress
+id="progressBar"
+value="0"
+max="100"> </progress>
+
+<br><br>
+
+<button onclick="startDelivery()">
+Start Delivery
+</button>
+
+<button onclick="completeDelivery()">
+Delivered
+</button>
+
+</div>
+
+</div>
+
+<footer>
+    
+© 2026 KISAN MART | Farmer to Consumer Marketplace
+</footer>
+
+</body>
+</html>
